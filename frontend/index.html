@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Simple Notes</h1>
+      <p class="intro">A small website that talks to a small backend.</p>
+    </header>
+
+    <section class="card" aria-labelledby="status-title">
+      <h2 id="status-title">Backend connection</h2>
+      <p id="status" class="status">Not checked yet.</p>
+      <button id="check-btn" type="button">Check backend</button>
+    </section>
+
+    <section class="card" aria-labelledby="greet-title">
+      <h2 id="greet-title">Say hello</h2>
+      <div class="row">
+        <input id="name-input" type="text" placeholder="Your name" aria-label="Your name" />
+        <button id="greet-btn" type="button">Greet me</button>
+      </div>
+      <p id="greeting" class="result"></p>
+    </section>
+
+    <section class="card" aria-labelledby="notes-title">
+      <h2 id="notes-title">Notes</h2>
+      <div class="row">
+        <input id="note-input" type="text" maxlength="200" placeholder="Write a note" aria-label="New note" />
+        <button id="add-btn" type="button">Add note</button>
+      </div>
+      <p id="notes-message" class="result"></p>
+      <ul id="notes-list"></ul>
+      <p id="empty" class="empty">No notes yet. Add your first one above.</p>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
